@@ -100,11 +100,19 @@ function functionnality6() {
  console.log("coucou " + cardParent);
 let btnGrey = document.querySelector("a.btn.btn-secondary.my-2");
 console.log("coucou " + btnGrey);
-btnGrey.addEventListener("click", function() {
+/*btnGrey.addEventListener("click", function() {
+  insertBefore.
+});*/
 
+//fonctionnalité 7
+let greyButton = document.getElementsByClassName("btn-secondary")[0];
+let rowDiv = document.getElementsByClassName("row")[1];
+
+
+greyButton.addEventListener("click", function(){ 
+  let lastCard = document.getElementsByClassName("row")[1].lastElementChild;
+  rowDiv.insertBefore(lastCard, rowDiv.firstChild);
 });
-
-
 functionnality1bis();
 functionnality2();
 functionnality3();
